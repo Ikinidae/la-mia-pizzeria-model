@@ -4,22 +4,18 @@
     <div class="row">
         <div class="col-12">
             <div class="d-flex align-items-center">
-                <h1 class="mt-3 mb-3">Dettagli pizza</h1>
+                <h1 class="mt-3 mb-3">@Model.Name</h1>
             </div>
             <div class="post-single-image-container">
-                <img src="@Model.Image" alt="mmm pizza" width="900" height="600">
-            </div>
-            <p>
-                <strong>Nome:</strong>
-                @Model.Name
-            </p>
+                <img src="@Model.Image" alt="pizza" width="900" height="600">
+            </div>           
             <p>
                 <strong>Descrizione:</strong>
                 @Model.Description
             </p>
             <p>
                 <strong>Prezzo:</strong>
-                @Model.Price
+                @Model.Price €
             </p>
         </div>
     </div>

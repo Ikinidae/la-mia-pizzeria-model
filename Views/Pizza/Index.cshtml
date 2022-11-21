@@ -29,13 +29,13 @@ else
                         @pizza.Description
                     </td>
                     <td class="image">
-                        <img class="post-list-image" src="@pizza.Image" alt="mmm pizza" width="600" height="300">
+                        <img class="post-list-image" src="@pizza.Image" alt="pizza" width="600" height="300">
                     </td>
                     <td class="price">
                         @pizza.Price €
                     </td>
-                    <td>
-                        <a href="@Url.Action("Details",new {id = pizza.Id})"><button type="button" class="btn btn-info"> Dettagli Pizza </button></a>
+                    <td>                        
+                        <a class="btn btn-info" asp-area="" asp-controller="Pizza" asp-action="Details" asp-route-id="@pizza.Id">Dettagli Pizza</a>
                     </td>
                 </tr>
             }
