@@ -15,15 +15,15 @@ namespace la_mia_pizzeria_static.Controllers
 
             return View(listPizzas);
         }
-        
-        //public IActionResult Detail(int id)
-        //{
 
-        //    BlogDbContext db = new BlogDbContext();
+        public IActionResult Details(int id)
+        {
 
-        //    Post post = db.Posts.Where(p => p.Id == id).FirstOrDefault();
+            PizzeriaDbContext db = new PizzeriaDbContext();
 
-        //    return View(post);
-        //}
+            Pizza pizza = db.Pizzas.Where(p => p.Id == id).FirstOrDefault();
+
+            return View(pizza);
+        }
     }
 }
